@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/css.css"
+            rel="stylesheet"
+            type="text/css">
+
+    <title>Papá Noel</title>
+    </head>
+
+    <body>
+        <nav>
+            <div class="encabezado">
+                    <img src="images/logo.jpg"
+                    alt="Logo">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="descubre_papanoel.html">DESCUBRE A PAPÁ NOEL</a></li>
+                    <li><a href="sigue_papanoel.html">SIGUE A PAPÁ NOEL</a></li>
+                    <li><a href="visita_papanoel.html">VISITA A PAPÁ NOEL</a></li>
+                    <li><a href="envia_tu_carta.html">ENVIA TU CARTA</a></li>
+                    <li><a href="villancicos.html">VILLANCICOS</a></li>
+                    <li><a href="llama_papanoel.html">LLAMA A PAPÁ NOEL</a></li>
+                    <li><a href="juega.html">¡JUEGA!</a></li>
+                  </ul>
+                </div>   
+                
+                <!-- Botones de la navbar metidos en uno solo para movil y tablet -->
+            <div id="icono-navbar">
+                <img src="images/MENU MOVIL.jpg" alt="navbar" class="icono-navbar">
+                <div id="menu-navbar" style="display: none;">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="descubre_papanoel.html">DESCUBRE A PAPÁ NOEL</a></li>
+                    <li><a href="sigue_papanoel.html">SIGUE A PAPÁ NOEL</a></li>
+                    <li><a href="visita_papanoel.html">VISITA A PAPÁ NOEL</a></li>
+                    <li><a href="envia_tu_carta.html">ENVIA TU CARTA</a></li>
+                    <li><a href="villancicos.html">VILLANCICOS</a></li>
+                    <li><a href="llama_papanoel.html">LLAMA A PAPÁ NOEL</a></li>
+                    <li><a href="juega.html">¡JUEGA!</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <div id="logo-movil">
+                <img src="images/logo.jpg" alt="navbar" class="logo-movil">
+            </div>
+
+                
+                <div class="botones1">
+                    <button id="SIGN_IN">SIGN IN</button>
+                    <button id="REGISTER">REGISTER</button>
+                </div>
+                    <!-- Ícono del perfil -->
+                <div id="icono-perfil" style="display: none;">
+                    <img src="images/icono-perfil.jpg" alt="Perfil" class="icono-perfil">
+                    <div id="menu-perfil" style="display: none;">
+                    <ul>
+                        <li id="PERFIL">MI PERFIL</li>
+                        <li id="MIS_CARTAS">MIS CARTAS</li>
+                        <li id="MODO_PADRES">MODO PADRES</li>
+                        <li id="MODO_NINOS">MODO NIÑOS</li>
+                        <li id="MIS_RESENAS_BTN">MIS RESEÑAS</li>
+                        <li id="MIS_EXPERIENCIAS_BTN">MIS EXPERIENCIAS</li>
+                        <li id="cerrar_sesion">CERRAR SESIÓN</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            </nav>
+<!--Inicio de sesión-->
+<div id="popup-inicio" class="popup">
+    <div class="popup-content">
+        <span class="close" id="close-signin">&times;</span>
+        <h2>Inicia sesión</h2>
+        <form>
+            <label for="username-login">Nombre de usuario:</label>
+            <input type="text" id="username-login" name="username-login" required>
+            <label for="password-login">Contraseña:</label>
+            <input type="password" id="password-login" name="password-login" required>
+            <button type="submit" id = "entrar">Entrar</button>
+            <button type="submit" id="login-cancel">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<!--Modal de registro-->
+<div id="popup-registro" class="popup">
+<div class="popup-content">
+    <span class="close" id="close-register">&times;</span>
+    <h2>Regístrate</h2>
+    <form>
+        <label for="username-register">Nombre de usuario:</label>
+        <input type="text" id="username-register" name="username-register" required minlength="3">
+
+        <label for="password-register">Contraseña:</label>
+        <input type="password" id="password-register" name="password-register" required minlength="12">
+
+        <label for = "confirm-password">Confirma la contraseña:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <label for="email-register">Correo electrónico:</label>
+        <input type="email" id="email-register" name="email-register" required>
+
+        <label for = "ciudad-register">Ciudad:</label>
+        <input type="text" id="ciudad-register" name="ciudad-register" required minlength="3">
+
+        <label for = "pais-register">País:</label>
+        <input type="text" id="pais-register" name="pais-register" required minlength="3">
+
+        <label for = "genero-register">Género:</label>
+        <select id="genero-register" name="genero-register">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+            <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+        </select>
+
+        <label for = "hijos-register">¿Cuántos hijos/hijas tienes?</label>
+        <input type="number" id="hijos-register" name="hijos-register" required min="0">
+
+        <div id = "hijos_info"> </div>
+
+        
+
+
+        <button type="submit" id="aceptar-registro">Regístrate</button>
+        <button type="submit" id="register-cancel">Cancelar</button>
+        <button type="submit" id="limpiar-registro">Limpiar</button>
+    </form>
+
+</div>
+</div>
+ <!-- Popup para Mi perfil-->
+ <div id = "miperfil-popup" class="popup">
+    <div class="popup-content">
+        
+        <h2>Mi perfil</h2>
+        <form id="perfil-info"> 
+            <label for="username-perfil">Nombre de usuario:</label>
+            <input type="text" id="username-perfil" name="username-perfil" required minlength="3">
+            <label for="password-perfil">Contraseña:</label>
+            <input type="password" id="password-perfil" name="password-perfil" required minlength="12">
+            <label for="email-perfil">Correo electrónico:</label>
+            <input type="email" id="email-perfil" name="email-perfil" required>
+            <label for = "ciudad-perfil">Ciudad:</label>
+            <input type="text" id="ciudad-perfil" name="ciudad-perfil" required minlength="3">
+            <label for = "pais-perfil">País:</label>
+            <input type="text" id="pais-perfil" name="pais-perfil" required minlength="3">
+            <label for = "genero-perfil">Género:</label>
+            <select id="genero-perfil" name="genero-perfil">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="otro">Otro</option>
+                <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+            </select>
+            <button type="submit" id = "guardar-perfil">Guardar cambios</button>
+            <button type="submit" id="close-perfil">Cancelar</button>
+
+        </form>
+    </div>
+</div>
+
+<!--Popup Mis Cartas-->
+<div id = "miscartas-popup" class="popup_cartas">
+    <div class="popup-content_cartas">
+        <span class="close" id="close-cartas">&times;</span>
+        <h2>Mis cartas</h2>
+        <div class = "contenedor3" id="cartas_container"> 
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!--Pop-up modo padres-->
+<div id="popup-modo_padres" class="popup">
+    <div class="popup-content">
+        <span class="close" id="close-padres">&times;</span>
+        <h2>Confirma que eres mayor de edad iniciando sesión de nuevo</h2>
+        <form>
+            <label for="username-padres">Nombre de usuario:</label>
+            <input type="text" id="username-padres" name="username-padres" required>
+            <label for="password-padres">Contraseña:</label>
+            <input type="password" id="password-padres" name="password-login" required>
+            <button type="submit" id = "entrar-padres">Entrar</button>
+            <button type="submit" id="modo_padres-cancel">Cancelar</button>
+        </form>
+    </div>
+</div>
+    <!-- Popup para mis reseñas -->
+    <div id="misresenas-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-resenas">&times;</span>
+            <h2>Mis reseñas</h2>
+            <div class="contenedor3" id="resenas_container"> 
+                <!-- Las reseñas se mostrarán aquí -->
+            </div>
+            
+        </div>
+    </div>
+
+<section class="pagina7" id="pagina7">
+    <div class = "contenedor7">
+        <div class="izquierda7">
+        <aside class="textopag2 col-12 col-s-6">
+        <p> Seguro que siempre has querido ver a Papa Noel en persona. 
+            Quizás para eso queda tiempo, pero y si te digo que puedes verle y hablar con él como si estuviese en el salón de tu casa.  </p>
+        <img src="images/CONOCER.jpg" alt="Papá Noel" >
+        </aside>
+        </div>
+        <div class="boton_llamada">
+            <button class= "botones6" id="boton_videollamada">INICIAR VIDEOLLAMADA</button>
+        </div>
+    </div>
+    <div class="hohoho">
+        <p class="hohoho_texto">"Ho ho ho, estoy esperándote para nuestra llamada especial, ¡haz clic para comenzar!"
+    </div>
+
+</section>
+
+<div id="popup-videollamada-modo-padres" class="popup">
+    <div class="popup-content">
+        <span class="close" id="close-videollamada">&times;</span>
+        <h2>HABLA CON PAPÁ NOEL</h2>
+        <div id="video-container" style="display: none;">
+            <video id="papa-noel-video" width="100%" controls>
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+      <!-- Popup para mis experiencias -->
+      <div id="misexperiencias-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-experiencias">&times;</span>
+            <h2>Mis experiencias</h2>
+            <div class="contenedor3" id="experiencias_container"> 
+                <!-- Las experiencias se mostrarán aquí -->
+            </div>
+            <button id="dejar-resena-btn">Dejar una reseña</button>
+        </div>
+    </div>
+    <!-- Pop-up dejar una reseña -->
+    <div id="dejar-resena-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-resena">&times;</span>
+            <h2>Dejar una reseña</h2>
+            <form id="resena-form">
+                <label for="experiencia">Experiencia:</label>
+                <select id="experiencia" name="experiencia" required>
+                    <option value="oficina">Oficina de Papá Noel</option>
+                    <option value="casa">Casa de Papá Noel</option>
+                    <option value="taller">Taller de juguetes</option>
+                    <option value="granja">Granja de Papá Noel</option>
+                </select>
+                <label for="puntuacion">Puntuación:</label>
+                <select id="puntuacion" name="puntuacion" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+<footer>
+    <div class="contenedor8">
+        <div class="parte_arriba col-12">
+            <div class="last_logo col-12 col-s-4">
+            <img 
+            src="images/logo.jpg"
+            alt="Logo">
+            </div>
+            <h1 id="CONTACTANOS">¡CONTÁCTANOS!</h1>  
+        </div>
+        <div class="parte_abajo col-12">
+            <img 
+            src="images/piedepagina1.png"
+            alt="Twitter" onclick="alert('@trabajos_hugo.iña')">
+
+            <img id="insta"
+            src="images/piedepagina2.png"
+            alt="Instagram" onclick="alert('@trabajos_hugo.iña')">
+
+            <img 
+            src="images/piedepagina3.png"
+            alt="Facebook" onclick="alert('@trabajos_hugo.iña')">
+
+            <img 
+            src="images/piedepagina4.png"
+            alt="Youtube" onclick="alert('Academia Becerra Feijoó')">
+
+            <img 
+            src="images/piedepagina5.png"
+            alt="g-mail" onclick="alert('trabajos_hugo.iña@gmail.com')">
+
+        </div>
+    </div>
+</footer>
+<script src="scripts/navbar.js"></script>
+<script src="scripts/modo_padres.js"></script>
+<script src="scripts/llamada.js"></script>
+<script src="scripts/pop-ups.js"></script>
+<script src="scripts/experiencias.js"></script>
+</body>
+</html>
