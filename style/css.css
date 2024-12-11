@@ -190,6 +190,15 @@ nav {
     color: #ffffff;
     font-weight: bold;
 }
+#EMPEZAR_NINOS{
+    width: 16%;
+    height: 30px;
+    background-color: rgba(178, 34, 34, 0.5);
+    cursor: pointer;
+    border-radius: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
 
 .pag2{
     display: flex;
@@ -861,7 +870,16 @@ footer {
 /*Diseño resppnsive */
 /*Versión móvil*/
 @media (max-width:600px){
- 
+    
+    #EMPEZAR_PADRES, #EMPEZAR_NINOS{
+        width: 16%;
+        height: 10%;
+        background-color: rgba(178, 34, 34, 0.5);
+        cursor: pointer;
+        border-radius: 15px;
+        color: #ffffff;
+        font-weight: bold;
+    }
     
     #inicio {
         font-size: 1%;
@@ -984,6 +1002,15 @@ footer {
         border-radius: 50%;
   }
   
+#EMPEZAR_PADRES, #EMPEZAR_NINOS{
+    width: 16%;
+    height: 10%;
+    background-color: rgba(178, 34, 34, 0.5);
+    cursor: pointer;
+    border-radius: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
 .contenedor3{
     display: grid;
     grid-template-columns: repeat(3,1fr);
