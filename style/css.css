@@ -242,6 +242,7 @@ nav {
     align-items: center;
     justify-content: center;
     margin:auto;
+    margin-right: 10rem;
 }
 .textopag2{
     width: 50%;
@@ -277,14 +278,16 @@ nav {
 }
 
 #papanoel {
-    position: absolute; /* Necesario para mover todo el contenedor */
+    position: fixed; /* Necesario para mover todo el contenedor */
     display: flex;
     align-items: center;
+    width:20%;
+    height:20%;
 }
 
 #papanoel img {
-    width: 7%;
-    height: 6%;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
@@ -521,7 +524,6 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: rgb(199, 101, 101);
-    justify-content: center;
     align-items: center;
     height: calc(100vh - 12vh);
     margin-right: 2rem;
@@ -537,23 +539,22 @@ nav {
 
 .izquierda7 {
     padding: 3%;
-    width: auto;
+    width: 80%;
     height: auto;
     margin: auto;
 }
 
 .izquierda7 img{
-    width: 15rem;
-    height: 10rem;
+    width: 30rem;
+    height: 22rem;
 }
 
 .izquierda7 p{
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .boton_llamada{
-    margin: auto;
-    margin-right: 6rem;
+    margin-right: 10rem;
 }
 
 .botones7{
@@ -568,7 +569,7 @@ nav {
 
 #boton_videollamada {
     background-color: #fff;
-    font-size: 80%;
+    font-size: 100%;
     font-weight: bold;
     border-radius: 20%
 }
@@ -870,17 +871,98 @@ footer {
 /*Diseño resppnsive */
 /*Versión móvil*/
 @media (max-width:600px){
-    
-    #EMPEZAR_PADRES, #EMPEZAR_NINOS{
-        width: 16%;
-        height: 10%;
-        background-color: rgba(178, 34, 34, 0.5);
-        cursor: pointer;
-        border-radius: 15px;
-        color: #ffffff;
-        font-weight: bold;
+ 
+    .encabezado {
+        display: none;
     }
-    
+
+    #icono-navbar {
+        display:block;
+        width: 3.5rem; /* Ajustar al tamaño del logo */
+        cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+        margin-left: 2rem;
+    }
+
+    #icono-navbar img {
+        width: 50px; /* Ajusta el tamaño del icono de navegación */
+        height: 50px;
+        cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+    }
+
+    #menu-navbar {
+        position: absolute; /* Para que aparezca sobre el contenido */
+        top: 4rem; /* Ajustar según sea necesario */
+        margin-right: 20rem;
+        background-color: rgba(255, 255, 255, 0.9); /* Color de fondo del menú */
+        border: 0.1rem solid #030303; /* Borde del menú */
+        border-radius: 0.5rem; /* Esquinas redondeadas */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+        z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+        display: none; /* Oculto por defecto */
+    }
+
+    #icono-navbar.active #menu-navbar {
+        display: block; /* Muestra el menú de navegación cuando el icono está activo */
+    }
+
+    #menu-navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu-navbar li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #menu-navbar li:last-child {
+        border-bottom: none;
+    }
+
+
+    #logo-movil {
+        display: block;
+        width: 3.5rem; /* Ajustar al tamaño del logo */
+        cursor: pointer; /* Cambiar el cursor al pasar sobre el logo */
+        margin-left: 10rem;
+    }
+
+    #logo-movil img {
+        width: 50px; /* Ajusta el tamaño del logo */
+        height: 50px;
+        cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
+        border-radius: 90%;
+    }
+
+    .textopag2{
+        width: 90%;
+        font-size: 90%;
+        color: white;
+        text-align: justify;
+        margin: auto;
+    }
+
+    .imagenespag2{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        height: auto;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5rem;
+
+    }
+    #head2{
+        width:80%;
+    }
+
+    .imagenespag2 img{
+        width: 80%;
+        height: auto;
+        border-radius: 90px;
+    }
+
     #inicio {
         font-size: 1%;
         width:auto;
@@ -970,7 +1052,7 @@ footer {
 }
 
 .pagina7{
-    gap:10%;
+    gap:5%;
 }
 
 .contenedor7{
@@ -979,15 +1061,13 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 1%;
-    margin-right: 6rem;
 }
 
 
 #mapa {
-    margin-left: 9rem;
+    position: relative; /* Ajusta la posición del mapa */
+    bottom: 1vw;
 }
-
-
 }
 
 /*Versión tablet*/
@@ -1002,15 +1082,97 @@ footer {
         border-radius: 50%;
   }
   
-#EMPEZAR_PADRES, #EMPEZAR_NINOS{
-    width: 16%;
-    height: 10%;
-    background-color: rgba(178, 34, 34, 0.5);
-    cursor: pointer;
-    border-radius: 15px;
-    color: #ffffff;
-    font-weight: bold;
+
+  .encabezado {
+    display: none;
 }
+
+#icono-navbar {
+    display:block;
+    width: 3.5rem; /* Ajustar al tamaño del logo */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+    margin-left: 2rem;
+}
+
+#icono-navbar img {
+    width: 50px; /* Ajusta el tamaño del icono de navegación */
+    height: 50px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+}
+
+#menu-navbar {
+    position: absolute; /* Para que aparezca sobre el contenido */
+    top: 4rem; /* Ajustar según sea necesario */
+    margin-right: 20rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo del menú */
+    border: 0.1rem solid #030303; /* Borde del menú */
+    border-radius: 0.5rem; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto */
+}
+
+#icono-navbar.active #menu-navbar {
+    display: block; /* Muestra el menú de navegación cuando el icono está activo */
+}
+
+#menu-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-navbar li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#menu-navbar li:last-child {
+    border-bottom: none;
+}
+
+#logo-movil {
+    display: block;
+    width: 3.5rem; /* Ajustar al tamaño del logo */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el logo */
+    margin-left: 13rem;
+}
+
+#logo-movil img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: 50px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
+    border-radius: 90%;
+}
+
+.textopag2{
+    width: 90%;
+    font-size: 90%;
+    color: white;
+    text-align: justify;
+    margin: auto;
+}
+
+.imagenespag2{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    height: auto;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.1rem;
+}
+
+#head2{
+    width:80%;
+}
+
+.imagenespag2 img{
+    width: 70%;
+    height: auto;
+    border-radius: 90px;
+}
+
 .contenedor3{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -1087,18 +1249,11 @@ footer {
     margin-left: 6rem;
 }
 
-.pagina7{
-    gap:10%;
-}
 .contenedor7{
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1%;
-    margin-right: 7rem;
-    height: 40%;
 }
 
 .contenedor9{
@@ -1110,8 +1265,10 @@ footer {
 }
 
 #mapa {
-    margin-left: 9rem;
+    position: relative; /* Ajusta la posición del mapa */
+    left: 12vh;
 }
+
 .pagina8 h1{
     padding: 3%;
 }

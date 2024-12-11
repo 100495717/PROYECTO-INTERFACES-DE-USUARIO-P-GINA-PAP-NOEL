@@ -171,6 +171,14 @@ if (closeResena) {
     }
 }
 
+var closeReserva= document.getElementById("close-reserva");
+if (closeReserva) {
+    closeReserva.onclick = function() {
+        var reserva_Popup = document.getElementById("popup-reserva-modo-padres");
+        reserva_Popup.style.display = "none";
+    }
+}
+
 // Guardar la reseña en localStorage
 var resenaForm = document.getElementById("resena-form");
 var dejarResenaPopup = document.getElementById("dejar-resena-popup");

@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function(){
     updateHomeBackground();
     updateNavbar();
 
+
+
     function moverPapanoel() {
         const mapa = document.getElementById('mapa');
         const papanoel = document.getElementById('papanoel');
@@ -48,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function(){
   
   //Funcionalidad de mostrar pop-up mapa
   var popup_mapa = document.getElementById("popup-mapa");
-  var closeSpan = document.getElementsByClassName("close")[0];
   var chincheta = document.getElementById("chincheta");
 
   chincheta.onclick = function() {
@@ -56,14 +57,12 @@ document.addEventListener("DOMContentLoaded", function(){
     mostrarFraseAleatoria();
   }
 
-  closeSpan.onclick = function() {
-    popup_mapa.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == popup_mapa) {
-      popup_mapa.style.display = "none";
+  var closeMapa = document.getElementById("close-mapa-popup");
+if (closeMapa) {
+    closeMapa.onclick = function() {
+        var mapa_popup = document.getElementById("popup-mapa");
+        mapa_popup.style.display = "none";
     }
-  }
+}
 
    });
