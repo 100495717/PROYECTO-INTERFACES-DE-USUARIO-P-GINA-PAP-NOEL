@@ -175,7 +175,9 @@ function iniciarAdivinaRegalo() {
     { nombre: "taladro", imagen: "../images/OBJETO9.jpeg" },
     { nombre: "váter", imagen: "../images/OBJETO10.jpg" },
     { nombre: "zapatos", imagen: "../images/OBJETO11.jpg" },
-    { nombre: "moto", imagen: "../images/OBJETO12.jpg" }
+    { nombre: "moto", imagen: "../images/OBJETO12.jpg"},
+    { nombre: "pablo", imagen: "../images/pablo.jpg"}
+  
   ];
 
   var regaloActual = null;
