@@ -348,7 +348,7 @@ section{
 
 
 .btn-reservar {
-    background-color: #28a745;
+    background-color: #015514;
     display: flex;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -390,7 +390,7 @@ section{
 }
 
 #enviar-carta{
-    background-color: #28a745;
+    background-color: #015514;
     display: inline-block;
     color: #fff;
     padding: 0.6rem 1.5rem;
@@ -454,7 +454,7 @@ section{
 }
 
 #parar_musica {
-    background-color: #28a745;
+    background-color: #015514;
     color: #fff;
     padding: 0.7rem 1rem;
     margin-top: 1rem;
@@ -515,7 +515,7 @@ section{
 }
 
 #boton_videollamada {
-    background-color: #28a745;
+    background-color: #015514;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 0.7rem;
@@ -580,7 +580,7 @@ section{
 
 .juegos_pagina{
     color: rgb(0, 0, 0);
-    background-color: #28a745;
+    background-color: #015514;
     border-radius: 0.7rem;
     margin-bottom: 10%;
     padding: 1rem;
@@ -851,11 +851,17 @@ footer {
     padding: 1rem;
 }
 
-
+#labeljuego2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+   
+}
 /*Diseño resppnsive */
 /*Versión móvil*/
 @media (max-width:600px){
 
+   
     .html{
         font-size: 12px;
     }
@@ -915,6 +921,11 @@ footer {
         padding: 0;
         margin: 0;
     }
+    #menu-navbar li a {
+        text-decoration: none; /* Eliminar subrayado de los enlaces */
+        color: #000; 
+        
+    }
 
     #menu-navbar ul li {
         list-style: none;
@@ -949,9 +960,17 @@ footer {
         margin: auto;
     }
 
+    .contenedor2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descubre {
+        margin-bottom: 4.2rem;
+    }
     .imagenespag2{
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(4,1fr);
         height: auto;
         gap: 1.2rem;
         align-items: center;
@@ -1067,9 +1086,10 @@ footer {
 .juegos_pagina{
     font-size: 0.8rem;
 }
+    
 }
 /*Versión tablet*/
-@media (min-width:601px) and (max-width: 768px) {
+@media (min-width:601px) and (max-width: 769px) {
     .col-s-4 {width: 33.33%;}
     .col-s-6 {width: 50%;}
     .col-s-8 {width: 66.66%;}
@@ -1081,7 +1101,28 @@ footer {
   }
   
 
-  .encabezado {
+
+  .html{
+    font-size: 12px;
+}
+
+.popup-content{
+    margin-top: 8rem;
+}
+
+.popup-content-juego2{
+    margin-top: 8rem;
+}
+
+.popup-content_cartas{
+    margin-top: 8rem;
+}
+
+.popup-content-experiencias{
+    margin-top: 8rem;
+}
+
+.encabezado {
     display: none;
 }
 
@@ -1108,10 +1149,11 @@ footer {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
     z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
     display: none; /* Oculto por defecto */
+    list-style: none;
 }
 
 #icono-navbar.active #menu-navbar {
-    display: flex; /* Muestra el menú de navegación cuando el icono está activo */
+    display: block; /* Muestra el menú de navegación cuando el icono está activo */
 }
 
 #menu-navbar ul {
@@ -1120,7 +1162,8 @@ footer {
     margin: 0;
 }
 
-#menu-navbar li {
+#menu-navbar ul li {
+    list-style: none;
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
@@ -1128,12 +1171,23 @@ footer {
 #menu-navbar li:last-child {
     border-bottom: none;
 }
+#menu-navbar li a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    color: #000; 
+    
+}
+
+.contenedor2{
+    display: flex;
+
+    flex-direction: column;
+}
 
 #logo-movil {
     display: block;
     width: 3.5rem; /* Ajustar al tamaño del logo */
     cursor: pointer; /* Cambiar el cursor al pasar sobre el logo */
-    margin-left: 13rem;
+    margin-left: 16rem;
 }
 
 #logo-movil img {
@@ -1142,7 +1196,6 @@ footer {
     cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
     border-radius: 90%;
 }
-
 
 .textopag2{
     width: 90%;
@@ -1154,66 +1207,26 @@ footer {
 
 .imagenespag2{
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4,1fr);
+    height: auto;
+    gap: 1.2rem;
     align-items: center;
     justify-content: center;
-    margin-right: 0.1rem;
+    margin-right: auto;
+
+}
+#head2{
+    width:80%;
 }
 
-#head2{
-    width:70%;
+.descubre {
+    margin-bottom: 6.5rem;
 }
 
 .imagenespag2 img{
-    width: 70%;
+    width: 80%;
     height: auto;
     border-radius: 90px;
-}
-
-
-.contenedor3{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:1%;
-}
-
-.cartas{
-    border: 1px solid #C0C0C0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-    display: flex;
-    background-color: rgba(0, 100, 0, 0.9);
-    margin-top: 10%;  
-}
-
-.cartas h2{
-    text-align: center;
-    font-size: 10px;
-    white-space: nowrap;
-}
-
-.cartas img{
-    width: 40%;
-    height: auto;
-    border-radius: 50%;
- 
-}
-
-.cartas p{
-    font-size: 10px;
-}
-
-.formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    border-radius: 10%;
-    box-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
-    width: 90%;
-    height:60%;
 }
 
 #inicio {
@@ -1221,54 +1234,100 @@ footer {
     width:auto;
 }
 .logo{
-    margin-left: -20%;
+    margin-left: -2%;
 }
+
+.cartas img{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+
+#pagina3{
+height: auto;
+}
+.contenedor3{
+display: flex;
+flex-direction: column;
+gap:1%;
+
+}
+
+
+
+.formulario{
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 10%;
+box-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+width: 90%;
+height:60%;
+}
+
+
 #imagencita img{
-    width: 90%;
-    height: auto;
-    background-color: rgba(192, 192, 192, 0.5);
-    border-radius: 10%;
+width: 90%;
+height: auto;
+background-color: rgba(192, 192, 192, 0.5);
+border-radius: 10%;
 }
 .texto1 {
-    
-    color: #000000;
- 
+
+color: #000000;
+
 }
 #CONTACTANOS{
-    margin-left: 2%;
+margin-left: 2%;
 }
-
 
 .villancicos {
-    display: grid;
-    grid-template-columns: repeat(2,3fr);
-    gap: 1.3rem;
-    justify-content: center;
-    margin: auto;
+display: grid;
+grid-template-columns: repeat(2,3fr);
+gap: 1.5rem;
+justify-content: center;
+margin: auto;
+margin-left: 1.5rem;
+font-size: 10px;
+}
+
+.pagina7{
+gap:2%;
+}
+.izquierda7 img{
     margin-left: 6rem;
+    margin-top: 6rem;
 }
-
 .contenedor7{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10rem;
 }
 
-.contenedor9{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5rem;
+#boton_videollamada{
+margin-left: 10rem;
 }
+
 
 #mapa {
-    position: relative; /* Ajusta la posición del mapa */
-    left: 12vh;
+position: relative; /* Ajusta la posición del mapa */
+bottom: 1vw;
 }
 
-.pagina8 h1{
-    padding: 3%;
+
+.contenedor9{
+display: flex;
+flex-direction: column;
+}
+
+#imagenjuegos{
+width: 17rem;
+height: 17rem;
+}
+
+.juegos_pagina{
+font-size: 0.8rem;
 }
 }
