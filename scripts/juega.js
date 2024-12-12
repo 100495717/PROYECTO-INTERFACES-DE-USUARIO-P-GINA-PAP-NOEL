@@ -61,7 +61,9 @@ function iniciarRompeBolas() {
     bola.className = "bola";
     bola.style.width = "50px";
     bola.style.height = "50px";
+    bola.style.padding = "1.5rem";
     bola.style.position = "absolute";
+    bola.style.backgroundColor = "transparent";
     bola.style.borderRadius = "90%";
     bola.style.cursor = "pointer"; // Asegura que sea clicable
     juego_popup.appendChild(bola);

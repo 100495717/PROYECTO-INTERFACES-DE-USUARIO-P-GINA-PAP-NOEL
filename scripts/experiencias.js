@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                     var usuariologueado = JSON.parse(localStorage.getItem("usuariologueado"));
                     var username = usuariologueado.username;
-                    var experiencia = document.getElementById("experiencia").value;
+                    var experiencia = document.getElementById("experiencia-reserva").value;
 
                     var experienciaData = {
                         username: username,
@@ -133,12 +133,16 @@ experienciasContainer.addEventListener("click", function(event) {
     if (event.target && event.target.classList.contains("borrar-experiencia")) {
         var experienciaDiv = event.target.closest(".experiencia"); // Encuentra el div que contiene la experiencia
         if (confirm("¿Estás seguro de que quieres eliminar la experiencia?")) {
-            var experiencias = JSON.parse(localStorage.getItem("experienciaData")) || [];
+            var experiencias = JSON.parse(localStorage.getItem("experiencias")) || [];
             var username = experienciaDiv.querySelector("p:nth-child(1)").textContent.split(": ")[1];
             var experiencia = experienciaDiv.querySelector("p:nth-child(2)").textContent.split(": ")[1];
-            experiencias = experiencias.filter(exp => !(exp.username === username && exp.experiencia === experiencia));
-            localStorage.setItem("experiencias", JSON.stringify(experiencias));
-            experienciasContainer.removeChild(experienciaDiv); // Elimina la experiencia del DOM
+            var index = experiencias.findIndex(exp => exp.username === username && exp.experiencia === experiencia);
+            if (index !== -1) {
+                experiencias.splice(index, 1); // Elimina la experiencia del array
+                localStorage.setItem("experiencias", JSON.stringify(experiencias)); // Guarda el array actualizado
+                experienciasContainer.removeChild(experienciaDiv); // Elimina la experiencia del DOM
+            }
+                
         }
     }
 });
@@ -232,15 +236,14 @@ function cargarResenas() {
  
        resenas.forEach(function(resenaData) {
         var resenaDiv = document.createElement("div");
-        resenaDiv.className = "experiencia col-12 col-s-8";
+        resenaDiv.className = "resena col-12 col-s-8";
         resenaDiv.innerHTML = `
             <div class="contenido-experiencia">
                 <div class="texto" draggable="true">
                     <p>Experiencia: ${resenaData.experiencia}</p>
                     <p>Puntuación: ${resenaData.puntuacion}</p>
                     <p>Comentario: ${resenaData.comentario}</p>
-                    
-                    
+                    <button class="borrar-resena">BORRAR</button>
                 </div>
             </div>
         `;
@@ -248,6 +251,25 @@ function cargarResenas() {
     });
 }
 }
+
+
+// Borrar reseñas
+var resenasContainer = document.getElementById("resenas_container");
+resenasContainer.addEventListener("click", function(event) {
+    if (event.target && event.target.classList.contains("borrar-resena")) {
+        var resenaDiv = event.target.closest(".resena"); // Encuentra el div que contiene la reseña
+        if (confirm("¿Estás seguro de que quieres eliminar la reseña?")) {
+            var resenas = JSON.parse(localStorage.getItem("resenas")) || [];
+            var comentario = resenaDiv.querySelector("p:nth-child(3)").textContent.replace("Comentario: ", "");
+            var index = resenas.findIndex(resena => resena.comentario === comentario);
+            if (index !== -1) {
+                resenas.splice(index, 1); // Elimina la reseña del array
+                localStorage.setItem("resenas", JSON.stringify(resenas)); // Guarda el array actualizado
+                resenasContainer.removeChild(resenaDiv); // Elimina la reseña del DOM
+            }
+        }
+    }
+});
 
 
 

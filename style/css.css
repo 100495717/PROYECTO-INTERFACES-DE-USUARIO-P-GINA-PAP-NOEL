@@ -77,6 +77,7 @@ nav {
 .icono-perfil {
     width: 3.5rem; /* Ajustar al tamaño del logo */
     border: 0.2rem solid #030302;
+    box-shadow: #000000 0.2rem 0.2rem 0.2rem;
     border-radius: 50%;
     cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
     margin-right: 2rem;
@@ -214,18 +215,18 @@ nav {
     display: flex;
     flex-direction: column;
     margin: auto;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 .pag2 img{
     width: 12rem;
     height: auto;
-    border-radius: 90px;
+    border-radius: 50%;
+    box-shadow: #000000 0.2rem 0.2rem 0.2rem;
+    margin: auto;
     
 }
 #imagentexto{
     width: 16rem;
-    border-radius: 50%;
-    margin: auto;
 }
 
 #head2{
@@ -236,6 +237,7 @@ nav {
              -0.1rem 0.1rem 0 #000,
              0.1rem 0.1rem 0 #000;
     color: #ffffff;
+    margin-top: auto;
 }
 .contenedor2{
     display: flex;
@@ -250,19 +252,19 @@ nav {
     color: white;
     text-align: justify;
     margin: auto;
+    font-weight: bold;
     
 }
 
 .imagenespag2{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    height: auto;
     gap: 2rem;
     align-items: center;
     justify-content: center;
     margin-right: 8rem;
-    
-
+    width: 12rem;
+    border-radius: 50%;
 }
 
 
@@ -274,6 +276,9 @@ nav {
     background-image: url("../images/MAPAPA.jpg");
     background-size: cover;  /* Asegura que la imagen cubra el contenedor */
     background-position: center;  /* Centra la imagen */
+    box-shadow: #000000 0.2rem 0.2rem 0.2rem;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.7rem;
   
 }
 
@@ -328,6 +333,12 @@ nav {
     background-color: rgb(199, 101, 101);
     height: calc(100vh - 12vh);
     width: 100vw;
+}
+
+.contenedor4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -341,16 +352,15 @@ nav {
 
 .subtitulo {
     font-size: 0.9rem;
-    color: #fff
+    color: #fff;
+    margin-top: auto;
 }
 
 .lugares {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     height: auto;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
+    gap: 3rem;
     
 }
 
@@ -362,21 +372,22 @@ nav {
 }
 
 .lugares img {
-    width: 11rem;
-    height: 9rem;
+    width: 10rem;
+    height: 8rem;
     object-fit: cover; /* Asegúrate de que la imagen mantenga sus proporciones */
     border-radius: 20%;
+    box-shadow: #000000 0.2rem 0.2rem 0.2rem;
 }
 
 
 .btn-reservar {
     background-color: #28a745;
-    display: inline-block;
+    display: flex;
     color: #fff;
-    padding: 10px 20px;
-    margin-top: auto;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.7rem;
     cursor: pointer;
     box-shadow: #000000 0.2rem 0.2rem 0.2rem;
     transition: background-color 0.3s;
@@ -404,6 +415,7 @@ nav {
     -0.1rem 0.1rem 0 #000,
     0.1rem 0.1rem 0 #000;
     color: #ffffff;
+    margin-top: 0.6rem;
 
 }
 .formulario{
@@ -412,7 +424,7 @@ nav {
     align-items: center;
     background-color: rgba(253, 158, 158, 0.9);
     border-radius: 10%;
-    box-shadow: 0 0 10px rgba(8, 8, 8, 0.5);
+    box-shadow:  #000000 0.2rem 0.2rem 0.2rem;
     padding: 1.5rem;
     width: auto;
     height:auto;
@@ -423,10 +435,10 @@ nav {
     background-color: #28a745;
     display: inline-block;
     color: #fff;
-    padding: 0.8rem;
+    padding: 0.6rem 1.5rem;
     margin-top: 0.8rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.7rem;
     cursor: pointer;
     box-shadow: #000000 0.2rem 0.2rem 0.2rem;
     transition: background-color 0.3s;
@@ -494,10 +506,10 @@ nav {
 #parar_musica {
     background-color: #28a745;
     color: #fff;
-    padding: 0.7rem;
+    padding: 0.7rem 1rem;
     margin-top: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.7rem;
     cursor: pointer;
     box-shadow: #000000 0.2rem 0.2rem 0.2rem;
     transition: background-color 0.3s;
@@ -545,60 +557,64 @@ nav {
 }
 
 .izquierda7 img{
-    width: 30rem;
-    height: 22rem;
+    width: 20rem;
+    height: 16rem;
+    border: 0.2rem solid#fff;
+    border-radius: 50%;
+    box-shadow: #000000 0.2rem 0.2rem 0.2rem;
 }
 
 .izquierda7 p{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .boton_llamada{
     margin-right: 10rem;
-}
 
-.botones7{
-    padding: 6%;
-    color: rgb(192, 192, 192);
-    border-radius: 20%;
-    font-size: 70%;
-    font-weight: bold;
-    cursor: pointer;
-    white-space: nowrap;
 }
 
 #boton_videollamada {
-    background-color: #fff;
-    font-size: 100%;
+    background-color: #28a745;
+    font-size: 1rem;
     font-weight: bold;
-    border-radius: 20%
+    border-radius: 0.7rem;
+    border: none;
+    box-shadow: #000000 0.2rem 0.2rem 0.2rem;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#boton_videollamada:hover {
+    background-color: #165824d7;
 }
 
 .hohoho{
     max-width: 80%;
     margin-left: 5%;
-    font-size: 100%;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
 }
 
 .pagina8{
-    background-color: rgba(178, 34, 34, 0.678);
-    background-size: cover;
-    background-position: auto;
-    box-sizing: border-box;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(199, 101, 101);
+    align-items: center;
+    height: calc(100vh - 12vh);
+    margin-right: 2rem;
     width: 100vw;
-    border: 2px solid #C0C0C0;
-    display:block;
-    margin-bottom: 3%;
 }
 .pagina8 h1{
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #fafafa;
     font-weight: bold;
-    margin-top: 5%;
+    text-shadow: -0.1rem -0.1rem 0 #000,
+    0.1rem -0.1rem 0 #000,
+    -0.1rem 0.1rem 0 #000,
+    0.1rem 0.1rem 0 #000;
 
 }
 
@@ -607,43 +623,44 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
 }
 
-.contenedor9 img {
-    width: 20%;
-    height: 20%;
-    border-radius: 50%;
-    margin: 2%;
-}
 
 .juegos{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
  
 }
 #imagenjuegos{
-    width: 80%;
-    height: 80%;
-    margin-right: 10%;
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+    box-shadow: #050505 0.2rem 0.2rem 0.2rem;
+    border: 0.2rem solid #ffffff;
+    border-radius: 50%;
  
 }
 
 .juegos_pagina{
-    background-color: transparent;
     color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10%;
+    background-color: #28a745;
+    border-radius: 0.7rem;
     margin-bottom: 10%;
-    padding: 5%;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+    box-shadow: #050505 0.2rem 0.2rem 0.2rem;
 }
 
 .juegos_pagina:hover{
-    background-color: rgba(0, 100, 0, 0.5);
+    background-color: #165824d7;
 }
 
 #imagencita img{
@@ -756,18 +773,18 @@ footer {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    align-items: center;
 }
 
 .popup-content {
     background-color: #fff8f8;
     margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 1.2rem;
     width: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 300px;
-    border-radius: 10%;
+    border-radius: 1rem;
 }
 
 .popup-content form{
@@ -826,10 +843,47 @@ footer {
 .popup-content_cartas {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
     width: 90%;
     max-width: 600px;
+}
+
+.contenedor-popup {
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    gap: 2rem;
+    justify-content: center;
+    margin: auto;
+}
+
+.cartas {
+    border-radius: 0.7rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 100, 0, 0.819);
+    margin-top: 10%;  
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.borrar-carta {
+    background-color: #fdfdfd;
+    color: #060606;
+    margin: auto;
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    box-shadow: #000000 0.2rem 0.2rem 0.2rem;
+    transition: background-color 0.3s;
+}
+
+.borrar-carta:hover {
+    background-color: #8d908dd7;
 }
 
 .cards.dragging {
@@ -842,31 +896,28 @@ footer {
     transition: transform 0.3s ease-in-out; /* Suaviza el reposicionamiento */
 }
 
-.letter {
-    font-size: 40px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-/* Asegúrate de que los contenedores de reseñas y experiencias estén dentro del popup */
-#resenas_container, #experiencias_container {
-    max-height: 400px;
-    overflow-y: auto;
-    margin-top: 20px;
+.popup-content-experiencias {  
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    width: 90%;
+    max-width: 600px;
 }
 
 .experiencia, .resena {
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.7rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 100, 0, 0.819);
+    margin-top: 10%;  
+    text-align: center;
+    padding: 1rem;
 }
 
-/* Ajustes adicionales para asegurar que el contenido se mantenga dentro del popup */
-.popup-content .contenido-experiencia, .popup-content .contenido-resena {
-    max-width: 100%;
-    word-wrap: break-word;
-}
 
 /*Diseño resppnsive */
 /*Versión móvil*/

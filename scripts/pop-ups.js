@@ -356,7 +356,7 @@ mis_cartas.onclick = function() {
         cartaDiv.innerHTML = `
           <div class="contenido-cartas">
             <div class="texto" draggable="true">
-              <p>${carta.nombre}</p>
+              <p>Nombre: ${carta.nombre}</p>
               <p>Ciudad: ${carta.ciudad}</p>
               <p>País: ${carta.pais}</p>
               <p>${carta.carta}</p>
@@ -384,6 +384,7 @@ cartasContainer.addEventListener("click", function(event) {
           if (confirm("¿Estás seguro de que quieres eliminar la carta?")){
             var cartasData = JSON.parse(localStorage.getItem("cartas")) || [];
             var cartaTexto = cartaDiv.querySelector("p").textContent;
+            var usuariologueado = JSON.parse(localStorage.getItem("usuariologueado"));
             var carta = cartasData.find(carta => carta.carta === cartaTexto);
             var index = cartasData.indexOf(carta);
             cartasData.splice(index, 1);
