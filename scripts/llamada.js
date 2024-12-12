@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const videoSource = document.getElementById("video-source");
 
 const videos = [
-    "videos/video_1.mp4",
-    "videos/video2.mp4",
-    "videos/video3.mp4",
-    "videos/video4.mp4",
+    "../videos/video_1.mp4",
+    "../videos/video2.mp4",
+    "../videos/video3.mp4",
+    "../videos/video4.mp4",
     
     // Añade más URLs de vídeos aquí
 ];

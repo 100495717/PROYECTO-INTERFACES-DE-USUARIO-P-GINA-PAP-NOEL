@@ -52,7 +52,7 @@ function iniciarRompeBolas() {
   var velocidadCaida = 15; // Velocidad de caída
   var numbolas = 3; // Número de círculos simultáneos
   var bolas = [];
-  var imgPath = "images/bola.png";
+  var imgPath = "../images/bola.png";
   
   // Crear los círculos dinámicamente
   for (let i = 0; i < numbolas; i++) {
@@ -164,18 +164,18 @@ function iniciarAdivinaRegalo() {
   var puntos = 0;
   var tiempo = 60;
   var regalos = [
-    { nombre: "bicicleta", imagen: "images/OBJETO1.png" },
-    { nombre: "oso de peluche", imagen: "images/OBJETO2.png" },
-    { nombre: "maleta", imagen: "images/OBJETO3.png" },
-    { nombre: "guitarra", imagen: "images/OBJETO4.png" },
-    { nombre: "maceta", imagen: "images/OBJETO5.png" },
-    { nombre: "cuchara de madera", imagen: "images/OBJETO6.png" },
-    { nombre: "sarten", imagen: "images/OBJETO7.jpg" },
-    { nombre: "gato", imagen: "images/OBJETO8.jpeg" },
-    { nombre: "taladro", imagen: "images/OBJETO9.jpeg" },
-    { nombre: "váter", imagen: "images/OBJETO10.jpg" },
-    { nombre: "zapatos", imagen: "images/OBJETO11.jpg" },
-    { nombre: "moto", imagen: "images/OBJETO12.jpg" }
+    { nombre: "bicicleta", imagen: "../images/OBJETO1.png" },
+    { nombre: "oso de peluche", imagen: "../images/OBJETO2.png" },
+    { nombre: "maleta", imagen: "../images/OBJETO3.png" },
+    { nombre: "guitarra", imagen: "../images/OBJETO4.png" },
+    { nombre: "maceta", imagen: "../images/OBJETO5.png" },
+    { nombre: "cuchara de madera", imagen: "../images/OBJETO6.png" },
+    { nombre: "sarten", imagen: "../images/OBJETO7.jpg" },
+    { nombre: "gato", imagen: "../images/OBJETO8.jpeg" },
+    { nombre: "taladro", imagen: "../images/OBJETO9.jpeg" },
+    { nombre: "váter", imagen: "../images/OBJETO10.jpg" },
+    { nombre: "zapatos", imagen: "../images/OBJETO11.jpg" },
+    { nombre: "moto", imagen: "../images/OBJETO12.jpg" }
   ];
 
   var regaloActual = null;

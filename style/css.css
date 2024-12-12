@@ -182,24 +182,6 @@ nav {
     margin-bottom: 1.5rem;   
 }
 
-#EMPEZAR_PADRES{
-    width: 16%;
-    height: 30px;
-    background-color: rgba(178, 34, 34, 0.5);
-    cursor: pointer;
-    border-radius: 15px;
-    color: #ffffff;
-    font-weight: bold;
-}
-#EMPEZAR_NINOS{
-    width: 16%;
-    height: 30px;
-    background-color: rgba(178, 34, 34, 0.5);
-    cursor: pointer;
-    border-radius: 15px;
-    color: #ffffff;
-    font-weight: bold;
-}
 
 .pag2{
     display: flex;
@@ -226,7 +208,7 @@ nav {
     
 }
 #imagentexto{
-    width: 16rem;
+    width: 14rem;
 }
 
 #head2{
@@ -263,7 +245,6 @@ nav {
     align-items: center;
     justify-content: center;
     margin-right: 8rem;
-    width: 12rem;
     border-radius: 50%;
 }
 
@@ -922,6 +903,10 @@ footer {
 /*Diseño resppnsive */
 /*Versión móvil*/
 @media (max-width:600px){
+
+    .html{
+        font-size: 12px;
+    }
  
     .encabezado {
         display: none;
@@ -950,6 +935,7 @@ footer {
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
         z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
         display: none; /* Oculto por defecto */
+        list-style: none;
     }
 
     #icono-navbar.active #menu-navbar {
@@ -962,7 +948,8 @@ footer {
         margin: 0;
     }
 
-    #menu-navbar li {
+    #menu-navbar ul li {
+        list-style: none;
         padding: 10px;
         border-bottom: 1px solid #ddd;
     }
@@ -998,10 +985,10 @@ footer {
         display: grid;
         grid-template-columns: repeat(1,1fr);
         height: auto;
-        gap: 2rem;
+        gap: 1.2rem;
         align-items: center;
         justify-content: center;
-        margin-right: 5rem;
+        margin-right: auto;
 
     }
     #head2{
@@ -1038,34 +1025,7 @@ footer {
    
 }
 
-.cartas{
-    border: 1px solid #C0C0C0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-left: 15%;
-    display: flex;
-    background-color: rgba(0, 100, 0, 0.5);
-    margin-top: 10%;  
-}
 
-.cartas h2{
-    text-align: center;
-    font-size: 10px;
-    white-space: nowrap;
-    
-   
-}
-
-.cartas img{
-    width: 40%;
-    height: auto;
-    border-radius: 50%;
- 
-}
-
-.cartas p{
-    font-size: 10px;
-}
 
 .formulario{
     display: flex;
@@ -1103,7 +1063,7 @@ footer {
 }
 
 .pagina7{
-    gap:5%;
+    gap:2%;
 }
 
 .contenedor7{
@@ -1111,7 +1071,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1%;
+    margin-left: 2.5rem;
+    gap: 0.1rem;
+}
+
+#boton_videollamada{
+    margin-left: 6rem;
 }
 
 
@@ -1119,6 +1084,15 @@ footer {
     position: relative; /* Ajusta la posición del mapa */
     bottom: 1vw;
 }
+}
+
+#imagenjuegos{
+    width: 17rem;
+    height: 17rem;
+}
+
+.juegos_pagina{
+    font-size: 0.8rem;
 }
 
 /*Versión tablet*/
@@ -1164,7 +1138,7 @@ footer {
 }
 
 #icono-navbar.active #menu-navbar {
-    display: block; /* Muestra el menú de navegación cuando el icono está activo */
+    display: flex; /* Muestra el menú de navegación cuando el icono está activo */
 }
 
 #menu-navbar ul {
@@ -1196,6 +1170,7 @@ footer {
     border-radius: 90%;
 }
 
+
 .textopag2{
     width: 90%;
     font-size: 90%;
@@ -1207,7 +1182,6 @@ footer {
 .imagenespag2{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    height: auto;
     gap: 2rem;
     align-items: center;
     justify-content: center;
@@ -1215,7 +1189,7 @@ footer {
 }
 
 #head2{
-    width:80%;
+    width:70%;
 }
 
 .imagenespag2 img{
@@ -1223,6 +1197,7 @@ footer {
     height: auto;
     border-radius: 90px;
 }
+
 
 .contenedor3{
     display: grid;
@@ -1294,7 +1269,7 @@ footer {
 .villancicos {
     display: grid;
     grid-template-columns: repeat(2,3fr);
-    gap: 2rem;
+    gap: 1.3rem;
     justify-content: center;
     margin: auto;
     margin-left: 6rem;
@@ -1309,7 +1284,7 @@ footer {
 
 .contenedor9{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-left: 5rem;
