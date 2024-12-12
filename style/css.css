@@ -192,12 +192,6 @@ section{
 }
 
 
-.descubre{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    gap: 0.8rem;
-}
 .pag2 img{
     width: 12rem;
     height: auto;
@@ -207,7 +201,8 @@ section{
     
 }
 #imagentexto{
-    width: 14rem;
+    width: 25rem;
+    margin-left: 12rem;
 }
 
 #head2{
@@ -222,15 +217,24 @@ section{
 }
 .contenedor2{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin:auto;
 }
+
+.descubre {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 3.5rem;
+}
+
 .textopag2{
     width: 50%;
-    font-size: 90%;
+    font-size: 140%;
     color: white;
-    text-align: justify;
+    text-align: center;
     margin: auto;
     font-weight: bold;
     
@@ -238,7 +242,7 @@ section{
 
 .imagenespag2{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 2rem;
     align-items: center;
     justify-content: center;
